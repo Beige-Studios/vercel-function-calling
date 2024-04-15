@@ -1,7 +1,7 @@
 import { VercelRequest, VercelResponse } from "@vercel/node";
 import { getRandomName } from "../../functions/getRandomName";
 import { VapiPayload, VapiWebhookEnum } from "../../types/vapi.types";
-import { setCors } from "../../utils/cors.utils";
+// import { setCors } from "../../utils/cors.utils";
 
 /**
  * Handles POST requests from Vapi to perform function calls.
@@ -10,6 +10,14 @@ import { setCors } from "../../utils/cors.utils";
  * If the function name is not found, it logs an error message and throws an exception indicating the function is not found.
  * This handler is a basic example of how to implement function calls in Vapi without referring to other webhook handlers.
  */
+
+function setCors(res: VercelResponse) {
+  res.setHeader('Access-Control-Allow-Origin', 'https://dashboard.vapi.ai'); // Adjust according to your needs
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+}
+
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     if (req.method === "POST") {

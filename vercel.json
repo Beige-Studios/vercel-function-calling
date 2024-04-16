@@ -18,7 +18,7 @@
     {
       "src": "/api/functions/basic",
       "dest": "/api/functions/basic.ts",
-      "methods": ["POST"]
+      "methods": ["OPTIONS"]
     },
     {
       "src": "/api/functions/rag",

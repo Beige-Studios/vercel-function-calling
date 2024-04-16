@@ -20,7 +20,7 @@ function setCors(res: VercelResponse) {
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
-    if (req.method === "POST") {
+    if (req.method === "POST" || req.method === "OPTIONS") {
       setCors(res);
       const payload = req.body.message as VapiPayload;
 

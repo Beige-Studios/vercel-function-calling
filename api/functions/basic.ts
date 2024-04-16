@@ -56,7 +56,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             }
         } catch (err) {
             console.log('Error handling POST request:', err);
-            return res.status(500).json({ message: "Internal Server Error", error: err.message });
+            return res.status(500).json({ message: err, error: err.message });
         }
     }
 

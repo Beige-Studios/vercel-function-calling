@@ -2,7 +2,7 @@ import { VercelResponse } from "@vercel/node";
 
 export const setCors = (res: VercelResponse) => {
   res.setHeader("Access-Control-Allow-Credentials", "true");
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Origin", "https://dashboard.vapi.ai");
   res.setHeader(
     "Access-Control-Allow-Methods",
     "GET,OPTIONS,POST,PATCH,DELETE,PUT"

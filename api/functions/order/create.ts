@@ -27,10 +27,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
               }
 
               const lineItems = payload.functionCall.parameters.items
-              const customerName = payload.functionCall.parameters.phoneNumber
-              console.log('Line Items: ', lineItems, ' Customer Name: ', customerName);
+              const phoneNumber = payload.functionCall.parameters.phoneNumber
+              console.log('Line Items: ', lineItems, ' Customer Phone Number: ', phoneNumber);
 
-              const result = await sendOrder(lineItems, customerName)
+              const result = await sendOrder(lineItems, phoneNumber)
 
               return res.status(201).json({ message: result});
 

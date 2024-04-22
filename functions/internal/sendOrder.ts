@@ -6,7 +6,7 @@ export default async function sendOrder(orderContents, lastFourOfCustomerPhoneNu
     console.log('___Inside sendOrder function___')
     console.log('orderContents: ', orderContents);
     console.log('lastFourOfCustomerPhoneNumber: ', lastFourOfCustomerPhoneNumber);
-    console.log('___End of sendFunc, returning Success! mnessage');
+    console.log('___End of sendFunc, returning Success! message');
     return 'Success!';
   } catch (error) {
     console.log(error);

@@ -11,7 +11,7 @@ export default async function sendOrder(orderContents, lastFourOfCustomerPhoneNu
     console.log('lastFourOfCustomerPhoneNumber: ', lastFourOfCustomerPhoneNumber);
     console.log('Sending Text Message...');
     const text = generateOrderMessage(orderContents);
-    const result = await sendATextMessage(text, '+14803749758');
+    const result = await sendATextMessage('+14803749758', text);
     console.log('Message sent? ', result);
     console.log('___End of sendFunc, returning Success! message');
     return 'Success!';

@@ -1,0 +1,22 @@
+{ 
+  "model": {
+  "functions": [
+    {
+      "name": "sendOrder",
+      "async": true,
+      "description": "Send a kitchen order",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "phoneNumber": {
+            "type": "string"
+          },
+          "lineitems": {
+            "type": "array"
+          }
+        }
+      }
+    }
+  ]
+}
+}

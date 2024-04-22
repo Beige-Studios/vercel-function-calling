@@ -26,12 +26,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                   throw new Error("Invalid Request.");
               }
 
-              // const lineItems = payload.functionCall.parameters.items
-              const lastFourOfCustomerPhoneNumber = payload.functionCall.parameters.phoneNumber
-              // phone number might need to be separate object, away from line items
-              console.log('Line Items: ', 'NOT VALID', 'Last Four Digits: ', lastFourOfCustomerPhoneNumber);
+              const orderContents = payload.functionCall.parameters.orderContents
+              const lastFourOfCustomerPhoneNumber = payload.functionCall.parameters.lastFourOfCustomerPhoneNumber
 
-              const result = await sendOrder(lastFourOfCustomerPhoneNumber)
+              console.log('___API___')
+              console.log('orderContents: ', orderContents, 'lastFourOfCustomerPhoneNumber: ', lastFourOfCustomerPhoneNumber);
+
+              const result = await sendOrder(orderContents, lastFourOfCustomerPhoneNumber)
 
               return res.status(201).json({ message: result});
 

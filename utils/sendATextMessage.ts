@@ -18,3 +18,8 @@ async function sendATextMessage(phoneNumber: string, text: string): Promise<Stri
 }
 
 export default sendATextMessage;
+
+
+
+
+

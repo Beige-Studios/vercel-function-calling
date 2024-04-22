@@ -54,6 +54,11 @@
       "src": "/api/functions/order/create",
       "dest": "/api/functions/order/create.ts",
       "methods": ["POST"]
+    },
+    {
+      "src": "/api/functions/internal/order/create",
+      "dest": "/api/functions/internal/order/create.ts",
+      "methods": ["POST"]
     }
   ]
 }

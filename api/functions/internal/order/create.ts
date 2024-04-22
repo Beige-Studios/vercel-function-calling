@@ -26,6 +26,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                   throw new Error("Invalid Request.");
               }
 
+
+              console.log('Entire Payload: ', payload);
               const orderContents = payload.functionCall.parameters.orderContents
               const lastFourOfCustomerPhoneNumber = payload.functionCall.parameters.lastFourOfCustomerPhoneNumber
 

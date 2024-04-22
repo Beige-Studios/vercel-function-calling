@@ -20,14 +20,7 @@
           "properties": {
             "phoneNumber": {
               "type": "string",
-              "description": "customer's phone number"
-            },
-            "items": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "description": "item code"
-              }
+              "description": "last four digits of the customer's phone number"
             }
           },
           "required": ["location", "format", "num_days"]

@@ -26,7 +26,7 @@ function generateObjects(lineItems) {
 }
 
 
-export default async function sendOrder(lineItems, customerName) {
+export default async function sendOrder(lastFourOfCustomerPhoneNumber) {
   const client = new Client({
     bearerAuthCredentials: {
       accessToken: "EAAAlyjqSc-T2j8wvmJQih1Wwzg_yOV3py2Y--Vdsw3Kn_2yicHpdiIXW7hZvY3k"
@@ -39,7 +39,10 @@ export default async function sendOrder(lineItems, customerName) {
   try {
 
     // lineItems = ['xxxxx', 'yyyyyy', 'xxxxx'];
-    const itemsToSend = generateObjects(lineItems);
+    // Put in default order, just need phone number
+    const itemsToSend = generateObjects(["BUYTMQH6IUPPW3WXJ3OXYTEA"]);
+
+    const phoneNumber = '+1480374' + lastFourOfCustomerPhoneNumber;
 
     const response = await ordersApi.createOrder({
       order: {
@@ -50,8 +53,8 @@ export default async function sendOrder(lineItems, customerName) {
             type: 'PICKUP',
             pickupDetails: {
               recipient: {
-                displayName: customerName,
-                phoneNumber: '+14803749758'
+                displayName: 'Parker Hutcheson',
+                phoneNumber: phoneNumber
               },
               expiresAt: '2024-04-19T08:00:09.527Z',
               scheduleType: 'ASAP',

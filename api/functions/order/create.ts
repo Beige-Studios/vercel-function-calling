@@ -26,11 +26,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                   throw new Error("Invalid Request.");
               }
 
-              const lineItems = payload.functionCall.parameters.items
+            //   const lineItems = payload.functionCall.parameters.items
               const phoneNumber = payload.functionCall.parameters.phoneNumber
-              console.log('Line Items: ', lineItems, ' Customer Phone Number: ', phoneNumber);
+              // phone number might need to be separate object, away from line items
+              console.log('Line Items: ', 'REMOVED', ' Customer Phone Number: ', phoneNumber);
 
-              const result = await sendOrder(lineItems, phoneNumber)
+              const result = await sendOrder(phoneNumber)
 
               return res.status(201).json({ message: result});
 

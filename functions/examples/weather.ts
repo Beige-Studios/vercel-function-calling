@@ -1,5 +1,5 @@
 import axios from "axios";
-import { envConfig } from "../config/env.config";
+import { envConfig } from "../../config/env.config";
 
 interface getWeatherParams {
   city: string;

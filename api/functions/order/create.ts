@@ -1,5 +1,5 @@
 import { VercelRequest, VercelResponse } from "@vercel/node";
-import sendOrder from "../../../functions/sendOrder";
+import sendOrder from "../../../functions/integration/stripe/sendOrder";
 import { VapiPayload, VapiWebhookEnum } from "../../../types/vapi.types";
 import { setCors } from "../../../utils/cors.utils";
 import {generateUUID} from './../../../utils/uuidGenerator'

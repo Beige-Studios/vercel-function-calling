@@ -1,5 +1,5 @@
 import { Client, Environment, ApiError } from "square"
-import {generateUUID} from './../utils/uuidGenerator'
+import {generateUUID} from '../../../utils/uuidGenerator'
 
 function generateObjects(lineItems) {
   // Create an empty object to store the quantities

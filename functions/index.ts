@@ -1,7 +1,7 @@
-import { findKeywords } from "./fetchKeyword";
-import { getCharacterInspiration } from "./getCharacterInspiration";
-import { getRandomName } from "./getRandomName";
-import { getWeather } from "./weather";
+import { findKeywords } from "./examples/fetchKeyword";
+import { getCharacterInspiration } from "./examples/getCharacterInspiration";
+import { getRandomName } from "./examples/getRandomName";
+import { getWeather } from "./examples/weather";
 
 export default {
   getWeather: getWeather,

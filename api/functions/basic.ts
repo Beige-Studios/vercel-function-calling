@@ -1,5 +1,5 @@
 import { VercelRequest, VercelResponse } from "@vercel/node";
-import { getRandomName } from "../../functions/getRandomName";
+import { getRandomName } from "../../functions/examples/getRandomName";
 import { VapiPayload, VapiWebhookEnum } from "../../types/vapi.types";
 import { setCors } from "../../utils/cors.utils";
 

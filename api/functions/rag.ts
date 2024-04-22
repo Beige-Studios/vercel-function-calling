@@ -1,5 +1,5 @@
 import { VercelRequest, VercelResponse } from "@vercel/node";
-import { getCharacterInspiration } from "../../functions/getCharacterInspiration";
+import { getCharacterInspiration } from "../../functions/examples/getCharacterInspiration";
 import { VapiPayload, VapiWebhookEnum } from "../../types/vapi.types";
 import { setCors } from "../../utils/cors.utils";
 

@@ -1,10 +1,8 @@
 {
   "name": "Mary",
   "model": {
-    "provider": "custom-llm",
+    "provider": "openai",
     "model": "gpt-3.5-turbo",
-    "url": "https://server-side-example-serverless-vercel.vercel.app/api/custom-llm/openai-sse",
-
     "temperature": 0.7,
 
     "messages": [

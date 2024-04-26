@@ -36,23 +36,13 @@
       "methods": ["POST"]
     },
     {
-      "src": "/api/custom-llm/basic/chat/completions",
-      "dest": "/api/custom-llm/basic.ts",
-      "methods": ["POST"]
-    },
-    {
-      "src": "/api/custom-llm/openai-sse/chat/completions",
-      "dest": "/api/custom-llm/openai-sse.ts",
-      "methods": ["POST"]
-    },
-    {
-      "src": "/api/custom-llm/openai-advanced/chat/completions",
-      "dest": "/api/custom-llm/openai-advanced.ts",
-      "methods": ["POST"]
-    },
-    {
       "src": "/api/functions/internal/order/create",
       "dest": "/api/functions/internal/order/create.ts",
+      "methods": ["POST"]
+    },
+    {
+      "src": "/api/assistants/restaurant/create",
+      "dest": "/api/assistants/restaurant/create.ts",
       "methods": ["POST"]
     }
   ]

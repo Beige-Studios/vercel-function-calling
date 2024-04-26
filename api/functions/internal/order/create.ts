@@ -31,7 +31,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
               const orderContents = payload.functionCall.parameters.orderContents
               const lastFourOfCustomerPhoneNumber = payload.functionCall.parameters.lastFourOfCustomerPhoneNumber
 
-              console.log('___API___')
+              console.log('___API___');
               console.log('orderContents: ', orderContents, 'lastFourOfCustomerPhoneNumber: ', lastFourOfCustomerPhoneNumber);
 
               const result = await sendOrder(orderContents, lastFourOfCustomerPhoneNumber)
